@@ -1,0 +1,57 @@
+.details {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.detail--column {
+    flex-basis: 24%;
+    margin: 0 2rem;
+    display: flex;
+    justify-content: center;
+    
+    
+    
+}
+
+.detail--row {
+    display: flex; /* Create a new flex row for venues and bands */
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 4.5rem; /* Increase the font size */
+    color: orange;
+    text-shadow: 2px 2px 4px rgb(43, 40, 40), 2px 2px 4px rgba(255, 165, 0, 0.7); /* Use red and orange for text shadow */
+    margin-top: 4.5rem;
+}
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0); /* Completely transparent background */
+    color: rgb(43, 40, 40);
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(255, 165, 0, 0.7);
+    
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60') no-repeat center center fixed;
+    background-size: cover; /* Make sure the background covers the entire screen */
+    border: 65px solid rgb(43, 40, 40) ; /* Add a 10px rounded border with orange color */
+    border-radius: 30px; /* Adjust the border radius as needed */
+    color: rgb(51, 14, 51); /* Set text color to white for better visibility */
+}
