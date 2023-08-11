@@ -1,9 +1,110 @@
 const database = {
+    members : [
+      {
+        firstName : "Daniel",
+        lastName : "Bennett",
+        yearborn : 1995,
+        bandRole : "drummer",
+        bandName: "Crystal Waves"
+      },
+      {
+        firstName : "ry",
+        lastName : "star",
+        yearborn : 1993,
+        bandRole : "singer",
+        bandName: "Rocket Pumpkins"
+      },
+      {
+        firstName : "shy",
+        lastName : "paloof",
+        yearborn : 1998,
+        bandRole : "drummer",
+        bandName: "Electric Tigers"
+      },
+      {
+        firstName : "foofoo",
+        lastName : "gas",
+        yearborn : 1995,
+        bandRole : "singer",
+        bandName: "Electric Tigers"
+      },
+      {
+        firstName : "shamana",
+        lastName : "raunchy",
+        yearborn : 1999,
+        bandRole : "guitar",
+        bandName: "Electric Tigers"
+      },
+      {
+        firstName : "choold",
+        lastName : "munch",
+        yearborn : 1980,
+        bandRole : "drummer",
+        bandName: "Neon Groove"
+      },
+      {
+        firstName : "falafel",
+        lastName : "Bennett",
+        yearborn : 1995,
+        bandRole : "singer",
+        bandName: "Crystal Waves"
+      },
+      {
+        firstName : "papa",
+        lastName : "mentoli",
+        yearborn : 1966,
+        bandRole : "drummer",
+        bandName: "Sonic Pulse"
+      },
+      {
+        firstName : "harry",
+        lastName : "mud",
+        yearborn : 1949,
+        bandRole : "guitar",
+        bandName: "Sonic Pulse"
+      },
+      {
+        firstName : "punch",
+        lastName : "charge",
+        yearborn : 1989,
+        bandRole : "singer",
+        bandName: "Sonic Pulse"
+      },
+      {
+        firstName : "polly",
+        lastName : "shore",
+        yearborn : 1995,
+        bandRole : "drummer",
+        bandName: "Lunar Echo"
+      },
+      {
+        firstName : "donna",
+        lastName : "tarkoff",
+        yearborn : 1995,
+        bandRole : "guitar",
+        bandName: "Lunar Echo"
+      },
+      {
+        firstName : "Barry",
+        lastName : "Sanders",
+        yearborn : 1976,
+        bandRole : "drummer",
+        bandName: "Pop Slappers"
+      },
+      {
+        firstName : "Shack",
+        lastName : "Oneal",
+        yearborn : 1976,
+        bandRole : "drummer",
+        bandName: "Pop Slappers"
+      },
+    ],
+
     bands : [
   { 
     genre : "rock",
     name: "Rocket Pumpkins",
-    members: 4,
+    members: 1,
     yearFormed: 2010,
   },
   { 
@@ -15,7 +116,7 @@ const database = {
   { 
     genre : "rock",
     name: "Neon Groove",
-    members: 5,
+    members: 1,
     yearFormed: 2015,
   },
   { 
@@ -33,13 +134,13 @@ const database = {
   { 
     genre : "rock",
     name: "Lunar Echo",
-    members: 4,
+    members: 2,
     yearFormed: 2016,
   },
   {
     genre : "rock",
     name: "Pop Slappers",
-    members: 10,
+    members: 2,
     yearFormed: 2019,
   }
 ],
@@ -162,4 +263,7 @@ export const getVenues = () => {
 
 export const getBands = () => {
   return database.bands.map(band => ({...band}))
+}
+export const getMembers = () => {
+  return database.members.map(member => ({...member}))
 }

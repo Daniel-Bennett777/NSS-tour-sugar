@@ -1,14 +1,23 @@
-import { getBands, getBookings } from "./database.js"
+import { getBands, getBookings, getMembers} from "./database.js"
 
 const bands = getBands()
 const bookings = getBookings()
+const members = getMembers()
 
 document.addEventListener("click", (clickEvent) => {
     const itemClicked = clickEvent.target;
+
+    let membersInfoArray = [];
     let venuesNameArray = [];
 
     if (itemClicked.dataset.type === "band") {
         const clickedBandName = itemClicked.dataset.name;
+        
+        for (const member of members) {
+            if (member.bandName === clickedBandName) {
+                membersInfoArray.push(`${member.firstName} ${member.lastName} (${member.bandRole})`);
+            }
+        }
 
         for (const booking of bookings) {
             if (clickedBandName === booking.bandsName) {
@@ -16,13 +25,17 @@ document.addEventListener("click", (clickEvent) => {
             }
         }
 
-        if (venuesNameArray.length > 0) {
-            const venuesNames = venuesNameArray.join(", ");
-            window.alert(`${clickedBandName} is playing at the following venues: ${venuesNames}`);
+        const membersInfo = membersInfoArray.join(", ");
+        const venuesNames = venuesNameArray.join(", ");
+        
+        let alertMessage = `Band Members of ${clickedBandName}: ${membersInfo}`;
+        if (venuesNames.length > 0) {
+            alertMessage += `\nUpcoming Shows: ${venuesNames}`;
         }
+
+        window.alert(alertMessage);
     }
 });
-
 
 export const bandsList = () => {
 
