@@ -8,7 +8,6 @@ document.addEventListener(
     (clickEvent) => {
         const itemClicked = clickEvent.target
         let bandsInfo = []
-        debugger
         if (itemClicked.dataset.type === "booking"){
             const clickedBooking = itemClicked.dataset.bandsname
 
